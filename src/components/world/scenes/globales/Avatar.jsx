@@ -92,7 +92,7 @@ export function Avatar(props) {
       pianoSonata.currentTime = 0;
       pianoSonata.volume = Math.random();
       pianoSonata.play();
-      pianoParedSonata.loop = true;
+      pianoSonata.loop = true;
     } else {
       pianoSonata.pause();
     }
