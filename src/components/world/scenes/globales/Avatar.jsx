@@ -82,7 +82,7 @@ export function Avatar(props) {
   //     pianoSonata.currentTime = 0;
   //     pianoSonata.volume = Math.random();
   //     pianoSonata.play();
-  //     pianoParedSonata.loop = true
+  //     pianoSonata.loop = true
   //   }else{
   //     pianoSonata.pause();
   //   }
@@ -90,7 +90,7 @@ export function Avatar(props) {
   useEffect(() => {
     if (play1) {
       pianoSonata.currentTime = 0;
-      pianoSonata.volume = Math.random();
+      pianoSonata.volume = 0.5;
       pianoSonata.play();
       pianoSonata.loop = true;
     } else {
@@ -101,7 +101,7 @@ export function Avatar(props) {
   useEffect(() => {
     if (play2) {
       pianoParedSonata.currentTime = 2;
-      pianoParedSonata.volume = Math.random();
+      pianoParedSonata.volume = 0.5;
       pianoParedSonata.play();
       pianoParedSonata.loop = true;
     } else {
@@ -182,6 +182,7 @@ export function Avatar(props) {
       avatarRef.current.position.x += -0.006;
       //Si el avatar ya esta cerca del piano
     } else {
+      avatarRef.current.rotation.y = Math.PI/8;
       setanimationIndex(4);
     }
   }

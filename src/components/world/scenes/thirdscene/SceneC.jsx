@@ -5,7 +5,6 @@ import { Informacion2D } from "../globales/Informacion";
 import { Djembe } from "./Djembe";
 import { useTexture } from "@react-three/drei";
 import { TextBack } from "../globales/TextBack";
-import { useCharacterAnimations } from "../globales/CharacterAnimations";
 
 const SceneC = () => {
   const PATH = "/assets/textures/wood/";
@@ -16,7 +15,6 @@ const SceneC = () => {
     roughnessMap: PATH + "woodRoughness.png",
     aoMap: PATH + "woodAO.jpg",
   });
-  const { clicBack2 } = useCharacterAnimations();
 
   return (
     <>
@@ -42,7 +40,7 @@ const SceneC = () => {
             <meshStandardMaterial
               {...propsTexture}
               attach="material"
-              color={"white"}
+              color={"red"}
             />
           </mesh>
         </RigidBody>
@@ -64,7 +62,7 @@ const SceneC = () => {
         event={(e) => {
           window.open("https://github.com/JabCol");
         }}
-        message={` Aquí dejo mi \nrepositorio GitHub \ndonde podras hechar \nun vistazo a mis \nproyectos`}
+        message={` Here is my \nGitHub repository \nwhere you can take \na look at my\nprojects.`}
       />
       <TextBack pos={[12.3, 0.6, 1]} rotat={[0, 0.6, 0]} /> 
     </>
